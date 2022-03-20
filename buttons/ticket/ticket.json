@@ -1,0 +1,219 @@
+{
+    "name": "wyslij-ticket",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "prDAd",
+    "actions": [
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "ticket.embed.tresc",
+        "defaultVal": "",
+        "storage": "1",
+        "varName2": "embed",
+        "name": "Store Server Data"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "ticket.color",
+        "defaultVal": "",
+        "storage": "1",
+        "varName2": "colorembed",
+        "name": "Store Server Data"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "ticket.message.footer",
+        "defaultVal": "",
+        "storage": "1",
+        "varName2": "footerembeda",
+        "name": "Store Server Data"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "5",
+        "storage": "1",
+        "varName2": "url",
+        "name": "Store Server Info"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [
+          {
+            "name": "Ticket",
+            "type": "PRIMARY",
+            "id": "msg-button-149aef3",
+            "row": "",
+            "url": "",
+            "emoji": "",
+            "mode": "PERSISTENT",
+            "time": "",
+            "actions": [
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticket.color",
+                "defaultVal": "",
+                "storage": "1",
+                "varName2": "color",
+                "name": "Store Server Data"
+              },
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticket.created.message",
+                "defaultVal": "",
+                "storage": "1",
+                "varName2": "message",
+                "name": "Store Server Data"
+              },
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticket.created.category",
+                "defaultVal": "",
+                "storage": "1",
+                "varName2": "categoria",
+                "name": "Store Server Data"
+              },
+              {
+                "server": "0",
+                "varName": "",
+                "dataName": "ticket.button.message",
+                "defaultVal": "",
+                "storage": "1",
+                "varName2": "button",
+                "name": "Store Server Data"
+              },
+              {
+                "member": "1",
+                "varName": "",
+                "info": "2",
+                "storage": "1",
+                "varName2": "username",
+                "name": "Store Member Info"
+              },
+              {
+                "channelName": "ticket-${tempVars(\"username\")}",
+                "topic": "",
+                "position": "",
+                "storage": "1",
+                "varName": "channelcreated",
+                "categoryID": "${tempVars(\"categoria\")}",
+                "reason": "",
+                "name": "Create Text Channel"
+              },
+              {
+                "text": "${tempVars(\"button\")}",
+                "text2": "[ch]",
+                "text3": "${tempVars(\"channelcreated\")}",
+                "info": "1",
+                "storage": "1",
+                "varName": "button.message",
+                "name": "Replace Text"
+              },
+              {
+                "channel": "0",
+                "varName": "",
+                "message": "${tempVars(\"button.message\")}",
+                "buttons": [],
+                "selectMenus": [],
+                "attachments": [],
+                "embeds": [],
+                "reply": true,
+                "ephemeral": true,
+                "tts": false,
+                "overwrite": false,
+                "dontSend": false,
+                "editMessage": "0",
+                "editMessageVarName": "",
+                "storage": "0",
+                "varName2": "",
+                "name": "Send Message"
+              },
+              {
+                "text": "${tempVars(\"message\")}",
+                "text2": "[user]",
+                "text3": "${member}",
+                "info": "1",
+                "storage": "1",
+                "varName": "wiadomosc.created",
+                "name": "Replace Text"
+              },
+              {
+                "channel": "5",
+                "varName": "channelcreated",
+                "message": "",
+                "buttons": [],
+                "selectMenus": [],
+                "attachments": [],
+                "embeds": [
+                  {
+                    "title": "",
+                    "url": "",
+                    "color": "${tempVars(\"color\")}",
+                    "timestamp": "false",
+                    "imageUrl": "",
+                    "thumbUrl": "",
+                    "description": "${tempVars(\"wiadomosc.created\")}",
+                    "fields": [],
+                    "author": "",
+                    "authorUrl": "",
+                    "authorIcon": "",
+                    "footerText": "",
+                    "footerIconUrl": ""
+                  }
+                ],
+                "reply": false,
+                "ephemeral": false,
+                "tts": false,
+                "overwrite": false,
+                "dontSend": false,
+                "editMessage": "0",
+                "editMessageVarName": "",
+                "storage": "0",
+                "varName2": "",
+                "name": "Send Message"
+              }
+            ]
+          }
+        ],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "",
+            "url": "",
+            "color": "${tempVars(\"colorembed\")}",
+            "timestamp": "false",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "${tempVars(\"embed\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "${tempVars(\"footerembeda\")}",
+            "footerIconUrl": "${tempVars(\"url\")}"
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4"
+  }

@@ -1,0 +1,121 @@
+{
+    "name": "setup-ticket",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "FYHAZ",
+    "actions": [
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "ticket.color",
+        "changeType": "0",
+        "value": "slashParams(\"color\")",
+        "name": "Control Server Data"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "ticket.message.footer",
+        "changeType": "0",
+        "value": "slashParams(\"footer\")",
+        "name": "Control Server Data"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "ticket.created.message",
+        "changeType": "0",
+        "value": "slashParams(\"ticket\")",
+        "name": "Control Server Data"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "ticket.created.category",
+        "changeType": "0",
+        "value": "slashParams(\"categoria\")",
+        "name": "Control Server Data"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "ticket.embed.tresc",
+        "changeType": "0",
+        "value": "slashParams(\"tresc\")",
+        "name": "Control Server Data"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "dataName": "ticket.button.message",
+        "changeType": "0",
+        "value": "slashParams(\"button\")",
+        "name": "Control Server Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "${customEmoji(\"takgif\")} Pomyślnie ustawiono setup!",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "tresc",
+        "description": "Poddaj wiadomosc która ma byc w embedzie!",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "color",
+        "description": "Poddaj color embeda! (HEXEM)",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "footer",
+        "description": "Poddaj footer embeda!",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "ticket",
+        "description": "Poddaj wiadomosc która ma być na tickecie! [user] = kto tworzy",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "button",
+        "description": "Poddaj wiadomosc która ma byc po kliknieciu [ch] = ticket osoby",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "categoria",
+        "description": "Poddaj id categori gdzie mają się tworzyć tickety",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  }
