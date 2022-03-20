@@ -3,7 +3,7 @@
   "permissions": "ADMINISTRATOR",
   "permissions2": "NONE",
   "restriction": "1",
-  "_id": "JcgkD",
+  "_id": "TcieL",
   "actions": [
     {
       "server": "0",
@@ -29,7 +29,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": ":x: Ustaw najpierw setup rangi!",
+      "message": "${customEmoji(\"niegif\")} **Błąd:** Ustaw najpierw setup!",
       "buttons": [],
       "selectMenus": [],
       "attachments": [],
@@ -49,17 +49,38 @@
       "name": "End Action Sequence"
     },
     {
-      "channel": "0",
+      "server": "0",
       "varName": "",
-      "message": "Weryfikacja, klikaj niżej!",
+      "dataName": "verify.button.color",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "colorbutton",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "1",
+      "varName": "colorbutton",
+      "comparison": "1",
+      "value": "green",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "9"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "8",
+      "varName": "Channel",
+      "message": "",
       "buttons": [
         {
-          "name": "Weryfikacja",
-          "type": "PRIMARY",
-          "id": "msg-button-6d1be94",
+          "name": "",
+          "type": "SUCCESS",
+          "id": "msg-button-ecc8af9",
           "row": "",
           "url": "",
-          "emoji": "",
+          "emoji": "<a:tak:954851036793819147>",
           "mode": "PERSISTENT",
           "time": "",
           "actions": [
@@ -140,7 +161,146 @@
       ],
       "selectMenus": [],
       "attachments": [],
-      "embeds": [],
+      "embeds": [
+        {
+          "title": "Weryfikacja",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Kliknij przycisk poniżej by się zweryfikować!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "8",
+      "varName": "Channel",
+      "message": "",
+      "buttons": [
+        {
+          "name": "",
+          "type": "DANGER",
+          "id": "msg-button-302e192",
+          "row": "",
+          "url": "",
+          "emoji": "<a:tak:954851036793819147>",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "dataName": "verifyrole",
+              "defaultVal": "",
+              "storage": "1",
+              "varName2": "rr",
+              "name": "Store Server Data"
+            },
+            {
+              "storage": "1",
+              "varName": "rr",
+              "comparison": "1",
+              "value": "0",
+              "branch": {
+                "iftrue": "99",
+                "iffalse": "3",
+                "iftrueActions": [
+                  {
+                    "channel": "0",
+                    "varName": "",
+                    "message": "**Błąd:** Administrator zrestartował setup-weryfikacji! zgłoś mu to na pv!",
+                    "buttons": [],
+                    "selectMenus": [],
+                    "attachments": [],
+                    "embeds": [],
+                    "reply": true,
+                    "ephemeral": true,
+                    "tts": false,
+                    "overwrite": false,
+                    "dontSend": false,
+                    "editMessage": "0",
+                    "editMessageVarName": "",
+                    "storage": "0",
+                    "varName2": "",
+                    "name": "Send Message"
+                  }
+                ],
+                "iffalseVal": "1"
+              },
+              "name": "Check Variable"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": ":white_check_mark: Zostałeś zweryfikowany!",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "101",
+              "varName": "${tempVars(\"rr\")}",
+              "reason": "",
+              "name": "Add Member Role"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Weryfikacja",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Kliknij przycisk poniżej by się zweryfikować!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
       "reply": true,
       "ephemeral": false,
       "tts": false,
@@ -154,5 +314,14 @@
     }
   ],
   "comType": "4",
-  "description": "Wyslij weryfikacje"
+  "description": "Wyslij weryfikacje",
+  "parameters": [
+    {
+      "name": "Channel",
+      "description": "Kanał na którym ma wysłać weryfikacje",
+      "type": "CHANNEL",
+      "required": true,
+      "choices": null
+    }
+  ]
 }

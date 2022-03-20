@@ -3,7 +3,7 @@
   "permissions": "NONE",
   "permissions2": "NONE",
   "restriction": "1",
-  "_id": "twpdx",
+  "_id": "DyzCf",
   "actions": [
     {
       "member": "1",
@@ -39,6 +39,18 @@
       "name": "End Action Sequence"
     },
     {
+      "storage": "4",
+      "varName": "Color",
+      "comparison": "1",
+      "value": "'green'",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "9"
+      },
+      "name": "Check Variable"
+    },
+    {
       "server": "0",
       "varName": "",
       "dataName": "verifyrole",
@@ -47,9 +59,89 @@
       "name": "Control Server Data"
     },
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "verify.button.color",
+      "changeType": "0",
+      "value": "slashParams(\"Color\")",
+      "name": "Control Server Data"
+    },
+    {
       "channel": "0",
       "varName": "",
-      "message": "Pomyślnie ustawiono setup rangi: `${slashParams(\"ID\")}`",
+      "message": "${customEmoji(\"takgif\")} Pomyślnie ustawiono setup!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "4",
+      "varName": "Color",
+      "comparison": "1",
+      "value": "'red'",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "3"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "verifyrole",
+      "changeType": "0",
+      "value": "slashParams(\"id\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "verify.button.color",
+      "changeType": "0",
+      "value": "slashParams(\"Color\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${customEmoji(\"takgif\")} Pomyślnie ustawiono setup!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${customEmoji(\"gifnie\")} **Błąd:** Zmień color przycisku(red/green)",
       "buttons": [],
       "selectMenus": [],
       "attachments": [],
@@ -74,7 +166,14 @@
       "type": "STRING",
       "required": true,
       "choices": null
+    },
+    {
+      "name": "Color",
+      "description": "Poddaj jaki chcesz color przycisku! [red/green]",
+      "type": "STRING",
+      "required": true,
+      "choices": null
     }
   ],
-  "description": "Setup rangi weryfikacji!"
+  "description": "Setup weryfikacji!"
 }
