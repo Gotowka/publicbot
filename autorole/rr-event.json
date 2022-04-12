@@ -1,0 +1,61 @@
+{
+  "name": "reakcja",
+  "temp": "message",
+  "event-type": "28",
+  "_id": "HwhGU",
+  "actions": [
+    {
+      "reaction": "1",
+      "varName": "message",
+      "info": "3",
+      "storage": "1",
+      "varName2": "emotka",
+      "name": "Store Reaction Info"
+    },
+    {
+      "reaction": "1",
+      "varName": "message",
+      "info": "7",
+      "storage": "1",
+      "varName2": "last",
+      "name": "Store Reaction Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rr.emoji",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "emotka1",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "1",
+      "varName": "emotka",
+      "comparison": "1",
+      "value": "tempVars(\"emotka1\")",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rr.role",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "ranga",
+      "name": "Store Server Data"
+    },
+    {
+      "member": "2",
+      "varName2": "last",
+      "role": "101",
+      "varName": "${tempVars(\"ranga\")}",
+      "reason": "",
+      "name": "Add Member Role"
+    }
+  ]
+}
