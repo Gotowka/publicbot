@@ -1,0 +1,180 @@
+{
+  "name": "rr-setup",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "TpbIO",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "7"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${customEmoji(\"niegif\")} Błąd!",
+          "url": "",
+          "color": "#ff0000",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "\n> `Nie posiadasz uprawnień!`\n",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rr.role",
+      "changeType": "0",
+      "value": "slashParams(\"Id\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rr.emoji",
+      "changeType": "0",
+      "value": "slashParams(\"Emotka\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rr.tytul",
+      "changeType": "0",
+      "value": "slashParams(\"Tytul\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rr.tresc",
+      "changeType": "0",
+      "value": "slashParams(\"Tresc\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rr.color",
+      "changeType": "0",
+      "value": "slashParams(\"Color\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${customEmoji(\"takgif\")} Pomyślnie ustawiono setup!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "Tytul",
+      "description": "Poddaj tytul embeda!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Tresc",
+      "description": "Poddaj tresc embeda!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Color",
+      "description": "Poddaj color embeda!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Id",
+      "description": "Poddaj id rangi która ma nadawać po reakcji!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Emotka",
+      "description": "Poddaj emotke która ma by na reakcje!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Setup rr!"
+}
