@@ -1,0 +1,80 @@
+{
+  "name": "antylink",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "hTcNX",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "antylink",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "sprawdz",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "1",
+      "varName": "sprawdz",
+      "comparison": "1",
+      "value": "'tak'",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "txt",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "1",
+      "varName": "txt",
+      "comparison": "5",
+      "value": "'https://'",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "branch": {
+        "iftrue": "1",
+        "iffalse": "0"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "const Discord = require('discord.js');\nconst client = new Discord.Client({intents: [\"GUILDS\", \"GUILD_MESSAGES\"] });\n\nmsg.reply({ embeds: [new Discord.MessageEmbed()\n    .setTitle('Błąd!')\n    .setAuthor({ name: msg.author.tag , iconURL: msg.author.displayAvatarURL({ dynamic: true }) })\n    .setColor('0xff0000')\n    .setDescription(`<a:niegif:931298108393021510>, Nie posiadasz uprawnień by wysyłać linki!`)\n   .setFooter({ text: \"Zostałeś wyciszony na 30m!\" , iconURL: msg.author.displayAvatarURL({ dynamic: true }) })\n]});",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "time": "1800",
+      "reason": "AntyLink",
+      "name": "Timeout Member"
+    }
+  ],
+  "comType": "3"
+}
