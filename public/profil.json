@@ -1,0 +1,286 @@
+{
+  "name": "profil",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "qpxdG",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "server.icon",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "server.name",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "info": "31",
+      "storage": "1",
+      "varName2": "serveravatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "info": "7",
+      "storage": "1",
+      "varName2": "ranga",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "info": "28",
+      "storage": "1",
+      "varName2": "flags",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "info": "1",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "info": "22",
+      "storage": "1",
+      "varName2": "created",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "info": "24",
+      "storage": "1",
+      "varName2": "joined",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "info": "0",
+      "storage": "1",
+      "varName2": "banner",
+      "name": "Banner"
+    },
+    {
+      "date": "${tempVars(\"created\")}",
+      "info": "2",
+      "storage": "1",
+      "varName": "created1",
+      "name": "Store Date Info"
+    },
+    {
+      "date": "${tempVars(\"joined\")}",
+      "info": "2",
+      "storage": "1",
+      "varName": "joined1",
+      "name": "Store Date Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "dataName": "roles",
+      "defaultVal": "Nie podano!",
+      "storage": "1",
+      "varName2": "rangi",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "dataName": "badge",
+      "defaultVal": "Nie podano!",
+      "storage": "1",
+      "varName2": "bad",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "dataName": "level",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "myLevel",
+      "name": "Store Member Data"
+    },
+    {
+      "text": "${tempVars(\"rangi\")}",
+      "text2": "false",
+      "text3": "[Nie ma cie na serwerze](https://discord.gg/KM5EbpuJcH)",
+      "info": "0",
+      "storage": "1",
+      "varName": "rangaa",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"flags\")}",
+      "text2": " ",
+      "text3": "Brak!",
+      "info": "1",
+      "storage": "1",
+      "varName": "badgracz",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"ranga\")}",
+      "text2": "@everyone",
+      "text3": "Brak!",
+      "info": "0",
+      "storage": "1",
+      "varName": "ranga12",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"bad\")}",
+      "text2": "false",
+      "text3": "Brak!",
+      "info": "0",
+      "storage": "1",
+      "varName": "badge",
+      "name": "Replace Text"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "banner",
+      "comparison": "1",
+      "value": "undefined",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "26"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "**Profil**",
+          "url": "",
+          "color": " #6a85b0",
+          "timestamp": "false",
+          "imageUrl": "${tempVars(\"banner\")}",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "<:account:968649900151676948> **Gracza:**\n\n> <:question:968646961785876483> **Id:** `${tempVars(\"tag\")}`\n> <:image:968643891144314901> **Avatar:** [Kliknij](${tempVars(\"avatar\")})\n> <:image:968643891144314901> **Banner:** [Kliknij](${tempVars(\"banner\")})\n> <:plecak:968655941304188938> **Badge:** ${tempVars(\"badgracz\")}\n> <:dodanie:968644981768224798> **Data stworzenia:** `(`<t:${tempVars(\"created1\")}:R>`)`\n\n<:server:968648618917625876> **Serwerowy:**\n\n> <:members:968643645341306931> **Member:** ${slashParams(\"User\")}\n> <:image:968643891144314901> **Avatar:** [Kliknij](${tempVars(\"serveravatar\")})\n> <:tarcza:968651566217310208> **Ranga:** ${tempVars(\"ranga12\")}\n> <:samolot:968644981696921630> **Data dołączenia:** `(`<t:${tempVars(\"joined1\")}:R>`)`\n\n<:bot:968659243542650900> **Serwera wsparcia:**\n\n> <:members:968643645341306931> **Member:** ${slashParams(\"User\")}\n> <:tarcza:968651566217310208> **Ranga:** ${tempVars(\"rangaa\")}\n> <:plecak:968655941304188938> **Badge:** ${tempVars(\"badge\")}\n",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "**Profil**",
+          "url": "",
+          "color": " #6a85b0",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"avatar\")}",
+          "description": "<:account:968649900151676948> **Gracza:**\n\n> <:question:968646961785876483> **Id:** `${tempVars(\"tag\")}`\n> <:image:968643891144314901> **Avatar:** [Kliknij](${tempVars(\"avatar\")})\n> <:plecak:968655941304188938> **Badge:** ${tempVars(\"badgracz\")}\n> <:dodanie:968644981768224798> **Data stworzenia:** `(`<t:${tempVars(\"created1\")}:R>`)`\n\n<:server:968648618917625876> **Serwerowy:**\n\n> <:members:968643645341306931> **Member:** ${slashParams(\"User\")}\n> <:image:968643891144314901> **Avatar:** [Kliknij](${tempVars(\"serveravatar\")})\n> <:tarcza:968651566217310208> **Ranga:** ${tempVars(\"ranga12\")}\n> <:samolot:968644981696921630> **Data dołączenia:** `(`<t:${tempVars(\"joined1\")}:R>`)`\n\n<:bot:968659243542650900> **Serwera wsparcia:**\n\n> <:members:968643645341306931> **Member:** ${slashParams(\"User\")}\n> <:tarcza:968651566217310208> **Ranga:** ${tempVars(\"rangaa\")}\n> <:plecak:968655941304188938> **Badge:** ${tempVars(\"badge\")}\n",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Profil gracza!",
+  "parameters": [
+    {
+      "name": "User",
+      "description": "Gracz o którym poznajesz informacje!",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
