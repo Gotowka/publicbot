@@ -1,0 +1,160 @@
+{
+  "name": "ankieta",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "pmZoo",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_GUILD",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "7"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${customEmoji(\"niegif\")} Błąd!",
+          "url": "",
+          "color": "#ff0000",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "\n> `Nie posiadasz uprawnień!`\n",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "icon",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Server Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Ankieta:",
+          "url": "",
+          "color": "RANDOM",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Author: \n\n> ${member}\n\nTreść:\n\n> ${slashParams(\"Tresc\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"name\")}",
+          "footerIconUrl": "${tempVars(\"icon\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "ankieta",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "ankieta",
+      "emoji": "0",
+      "varName2": "takgif",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "ankieta",
+      "emoji": "0",
+      "varName2": "niegif",
+      "varName3": "",
+      "name": "Add Reaction"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "Tresc",
+      "description": "Poddaj tresc ankiety!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Utwórz swoją ankiete!"
+}
