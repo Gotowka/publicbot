@@ -1,0 +1,304 @@
+{
+  "name": "opinia",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "hSvEl",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Pomyślnie wysłano opinie!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "4",
+      "varName": "Opinia",
+      "branches": [
+        {
+          "comparison": "1",
+          "value": "1",
+          "actions": [
+            {
+              "channel": "103",
+              "varName": "960609124842881125",
+              "message": "${customEmoji(\"opiniatak\")} ${member}",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Opinia!",
+                  "url": "",
+                  "color": "#004d5c",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "**Opinia:**\n> ${customEmoji(\"opiniatak\")}${customEmoji(\"opinianie\")}${customEmoji(\"opinianie\")}${customEmoji(\"opinianie\")}${customEmoji(\"opinianie\")}\n\n**Powod:**\n> ${slashParams(\"Powod\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+                  "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "2",
+          "actions": [
+            {
+              "channel": "103",
+              "varName": "960609124842881125",
+              "message": "${customEmoji(\"opiniatak\")} ${member}",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Opinia!",
+                  "url": "",
+                  "color": "#004d5c",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "**Opinia:**\n> ${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}${customEmoji(\"opinianie\")}${customEmoji(\"opinianie\")}${customEmoji(\"opinianie\")}\n\n**Powod:**\n> ${slashParams(\"Powod\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+                  "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "3",
+          "actions": [
+            {
+              "channel": "103",
+              "varName": "960609124842881125",
+              "message": "${customEmoji(\"opiniatak\")} ${member}",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Opinia!",
+                  "url": "",
+                  "color": "#004d5c",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "**Opinia:**\n> ${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}${customEmoji(\"opinianie\")}${customEmoji(\"opinianie\")}\n\n**Powod:**\n> ${slashParams(\"Powod\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+                  "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "4",
+          "actions": [
+            {
+              "channel": "103",
+              "varName": "960609124842881125",
+              "message": "${customEmoji(\"opiniatak\")} ${member}",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Opinia!",
+                  "url": "",
+                  "color": "#004d5c",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "**Opinia:**\n> ${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}${customEmoji(\"opinianie\")}\n\n**Powod:**\n> ${slashParams(\"Powod\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+                  "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "5",
+          "actions": [
+            {
+              "channel": "103",
+              "varName": "960609124842881125",
+              "message": "${customEmoji(\"opiniatak\")} ${member}",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Opinia!",
+                  "url": "",
+                  "color": "#004d5c",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "**Opinia:**\n> ${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}${customEmoji(\"opiniatak\")}\n\n**Powod:**\n> ${slashParams(\"Powod\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+                  "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        }
+      ],
+      "name": "Multi-Check Variable"
+    }
+  ],
+  "comType": "4",
+  "description": "Wyslij opinie na temat bota!",
+  "parameters": [
+    {
+      "name": "Opinia",
+      "description": "Pomysl i podaj jaką masz opinie co do bota! - = /",
+      "type": "INTEGER",
+      "required": true,
+      "choices": [
+        {
+          "name": "1-5",
+          "value": 1
+        },
+        {
+          "name": "2-5",
+          "value": 2
+        },
+        {
+          "name": "3-5",
+          "value": 3
+        },
+        {
+          "name": "4-5",
+          "value": 4
+        },
+        {
+          "name": "5-5",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "name": "Powod",
+      "description": "Dlaczego tak oceniasz naszego bota?",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "_timeRestriction": 172800
+}
