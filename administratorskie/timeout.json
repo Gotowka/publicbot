@@ -1,0 +1,274 @@
+{
+  "name": "timeout",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "Pvrmv",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_MESSAGES",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "7"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${customEmoji(\"niegif\")} Błąd!",
+          "url": "",
+          "color": "#ff0000",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "\n> `Nie posiadasz uprawnień!`\n",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "permission": "ADMINISTRATOR",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${customEmoji(\"niegif\")} Błąd!",
+          "url": "",
+          "color": "#ff0000",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "\n> `Nie posiadasz uprawnień by nadać timeouta tej osobie!`\n",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "time": "${slashParams(\"Czas\")}",
+      "storage": "1",
+      "varName": "time",
+      "name": "Convert Seconds To D/H/M/S"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "time": "${slashParams(\"Czas\")}",
+      "reason": "${slashParams(\"Reason\")}",
+      "name": "Timeout Member"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${customEmoji(\"takgif\")} Sukces!",
+          "url": "",
+          "color": "#00f000",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "\n> `Pomyślnie wyciszyłeś!`",
+          "fields": [],
+          "author": "${tempVars(\"member.username.command\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"member.avatar.command\")}",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "0",
+      "varName": "User",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${customEmoji(\"takgif\")} Sukces!",
+          "url": "",
+          "color": "#ff0000",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "\n> **Administrator:** ${member}\n\n> **Wyciszona osoba:** ${slashParams(\"User\")}\n\n> **Czas:** `${tempVars(\"time\")}`\n\n> **Powod:** `${slashParams(\"Reason\")}`\n",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "8",
+      "varName": "User",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${customEmoji(\"takgif\")} Zostałeś wyciszony!",
+          "url": "",
+          "color": "#ff0000",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "\n> **Administrator:** ${member}\n\n> **Czas:** `${tempVars(\"time\")}`\n\n> **Powod:** `${slashParams(\"Reason\")}`\n\n> **Serwer:** `${server.name}`\n",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "User",
+      "description": "Osoba kórej nadajesz wyciszenie",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Czas",
+      "description": "Czas wyciszenia w sekundach",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Reason",
+      "description": "Powód przez który wyciszasz osobę",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Wycisz osobę!"
+}
