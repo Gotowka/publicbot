@@ -1,0 +1,333 @@
+{
+  "name": "propozycje",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "wSpvq",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.title",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "title",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.message",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "message",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.footer",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "footer",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.color",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "color",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.vc",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "channel",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.komentarz",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "komentarze",
+      "name": "Store Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "id",
+      "comparison": "1",
+      "value": "tempVars(\"channel\")",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "branch": {
+        "iftrue": "1",
+        "iffalse": "0"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "server.name",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "member.tag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.name",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "infoIndex": "0",
+      "storage": "1",
+      "varName": "propozycja",
+      "name": "Store Command Params"
+    },
+    {
+      "text": "${tempVars(\"title\")}",
+      "text2": "[server.name]",
+      "text3": "${tempVars(\"server.name\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "title1",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"title1\")}",
+      "text2": "[member.name]",
+      "text3": "${tempVars(\"member.name\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "title2",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"title2\")}",
+      "text2": "[member.tag]",
+      "text3": "${tempVars(\"member.tag\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "tytul.embed",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"message\")}",
+      "text2": "[server.name]",
+      "text3": "${tempVars(\"server.name\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "tresc1",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"tresc1\")}",
+      "text2": "[member.tag]",
+      "text3": "${tempVars(\"member.tag\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "tresc2",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"tresc2\")}",
+      "text2": "[member.name]",
+      "text3": "${tempVars(\"member.name\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "tresc3",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"tresc3\")}",
+      "text2": "[member.mention]",
+      "text3": "${member}",
+      "info": "1",
+      "storage": "1",
+      "varName": "tresc4",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"tresc4\")}",
+      "text2": "[suggest]",
+      "text3": "${tempVars(\"propozycja\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "tresc.embed",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"footer\")}",
+      "text2": "[server.name]",
+      "text3": "${tempVars(\"server.name\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "footer1",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"footer1\")}",
+      "text2": "[member.tag]",
+      "text3": "${tempVars(\"member.tag\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "footer2",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"footer2\")}",
+      "text2": "[member.name]",
+      "text3": "${tempVars(\"member.name\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "footer3",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"footer3\")}",
+      "text2": "[suggest]",
+      "text3": "${tempVars(\"propozycja\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "footer.embed",
+      "name": "Replace Text"
+    },
+    {
+      "info": "0",
+      "find": "968692398102298634",
+      "storage": "1",
+      "varName": "nie",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "info": "0",
+      "find": "968693277291327548",
+      "storage": "1",
+      "varName": "tak",
+      "name": "Find Custom Emoji"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${tempVars(\"tytul.embed\")}",
+          "url": "",
+          "color": "${tempVars(\"color\")}",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${tempVars(\"tresc.embed\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"footer.embed\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "msg",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "1",
+      "varName2": "takgif",
+      "varName3": "tak",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "1",
+      "varName2": "niegif",
+      "varName3": "nie",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "komentarze",
+      "comparison": "1",
+      "value": "'on'",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "34"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "fromTarget": {
+        "_index": 1,
+        "message": "1",
+        "messageVarName": "msg"
+      },
+      "threadName": "Komentarz",
+      "autoArchiveDuration": "max",
+      "reason": "",
+      "storage": "0",
+      "storageVarName": "",
+      "name": "Create Thread"
+    }
+  ],
+  "comType": "3",
+  "description": "",
+  "parameters": []
+}
