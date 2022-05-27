@@ -1,0 +1,482 @@
+{
+  "name": "voice-setup",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "PhMLb",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "condition": "0",
+      "comparison": "4",
+      "value": "4",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Błąd!",
+          "url": "",
+          "color": "#c77575",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "<:nie:968692398102298634> **Błędne użycie komendy**\n<:tak:968693277291327548> **!voice-setup osoby [id-kanalu] [nazwa-kanalu] = var: [users] = osoby na serwerze**\n<:tak:968693277291327548> **!voice-setup role [id-kanalu] [id-rangi] [nazwa-kanalu] = var: [osoby] = osoby z daną rangą**\n\n||Tam gdzie jest [] to usuwasz je i zamieniasz na to co jest napisane, a role/osoby nie ruszasz( zalezy jakie staty chcesz mieć )||",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "statycheck",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "statycheck",
+      "comparison": "1",
+      "value": "'role'",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "12"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "statycheck",
+      "comparison": "1",
+      "value": "osoby",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "28"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Błąd!",
+          "url": "",
+          "color": "#c77575",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "<:nie:968692398102298634> **Błędne użycie komendy**\n<:tak:968693277291327548> **!voice-setup osoby [id-kanalu] [nazwa-kanalu] = var: [users] = osoby na serwerze**\n<:tak:968693277291327548> **!voice-setup role [id-kanalu] [id-rangi] [nazwa-kanalu] = var: [osoby] = osoby z daną rangą**\n\n||Tam gdzie jest [] to usuwasz je i zamieniasz na to co jest napisane, a role/osoby nie ruszasz( zalezy jakie staty chcesz mieć )||",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "channelcheck",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "101",
+      "varName": "${tempVars(\"channelcheck\")}",
+      "info": "0",
+      "storage": "1",
+      "varName2": "channelobject",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "channelobject",
+      "comparison": "1",
+      "value": "undefined",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Błąd!",
+          "url": "",
+          "color": "#c77575",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${customEmoji(\"nie\")} **Podałeś błędne id!**\n${customEmoji(\"tak\")} **Daj poprawne id!**\n${customEmoji(\"question\")} **Aby poznać id danej rangi użyj komendy /role-id**",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "3",
+      "storage": "1",
+      "varName": "rolecheck",
+      "name": "Store Command Params"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stats.role.voice",
+      "changeType": "0",
+      "value": "tempVars(\"channelcheck\")",
+      "name": "Control Server Data"
+    },
+    {
+      "role": "101",
+      "varName": "${tempVars(\"rolecheck\")}",
+      "info": "0",
+      "storage": "1",
+      "varName2": "check",
+      "name": "Store Role Info"
+    },
+    {
+      "storage": "1",
+      "varName": "rolecheck",
+      "comparison": "1",
+      "value": "undefined",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Błąd!",
+          "url": "",
+          "color": "#c77575",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${customEmoji(\"nie\")} **Podałeś błędne id!**\n${customEmoji(\"tak\")} **Daj poprawne id!**\n${customEmoji(\"question\")} **Aby poznać id danej rangi użyj komendy /role-id**",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stats.role.id",
+      "changeType": "0",
+      "value": "tempVars(\"rolecheck\")",
+      "name": "Control Server Data"
+    },
+    {
+      "info": "1",
+      "infoIndex": "4",
+      "storage": "1",
+      "varName": "channelname",
+      "name": "Store Command Params"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stats.role.voice.name",
+      "changeType": "0",
+      "value": "tempVars(\"channelname\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${customEmoji(\"takgif\")} Pomyślnie ustawiono setup!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "channelcheck",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "101",
+      "varName": "${tempVars(\"channelcheck\")}",
+      "info": "0",
+      "storage": "1",
+      "varName2": "channelobject",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "channelobject",
+      "comparison": "1",
+      "value": "undefined",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Błąd!",
+          "url": "",
+          "color": "#c77575",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${customEmoji(\"nie\")} **Podałeś błędne id!**\n${customEmoji(\"tak\")} **Daj poprawne id!**\n${customEmoji(\"question\")} **Aby poznać id danej rangi użyj komendy /role-id**",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stats.users.voice",
+      "changeType": "0",
+      "value": "tempVars(\"channelcheck\")",
+      "name": "Control Server Data"
+    },
+    {
+      "info": "1",
+      "infoIndex": "3",
+      "storage": "1",
+      "varName": "channelname",
+      "name": "Store Command Params"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stats.users.voice.name",
+      "changeType": "0",
+      "value": "tempVars(\"channelname\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${customEmoji(\"takgif\")} Pomyślnie ustawiono setup!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.length > 0 && author.id === user.id",
+      "max": "1",
+      "time": "60000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    }
+  ],
+  "comType": "0",
+  "parameters": [
+    {
+      "name": "Id",
+      "description": "Poddaj id kanału głosowego którego mam aktualizować!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Nazwa",
+      "description": "Poddaj nazwe kanału na którą mam zmienić!  [osoby = ilosc osob na serwerze]",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Staty",
+      "description": "Poddaj jakie statystyki bys chciał! (osoby)",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Setup statystyki!"
+}
