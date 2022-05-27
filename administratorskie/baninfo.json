@@ -1,0 +1,172 @@
+{
+  "name": "baninfo",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "ibtfz",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "101",
+      "varName": "${slashParams(\"Id\")}",
+      "dataName": "${slashParams(\"Id\")}.ban",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "test",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"test\")}",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "aaa",
+      "name": "Send Message"
+    },
+    {
+      "message": "1",
+      "varName": "aaa",
+      "info": "2",
+      "storage": "1",
+      "varName2": "sprawdz",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "1",
+      "varName": "sprawdz",
+      "comparison": "5",
+      "value": "false",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "10"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "aaa",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "RED",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${customEmoji(\"niegif\")} **Błąd:** Osoba nie posiada bana!",
+          "fields": [],
+          "author": "${tempVars(\"member.username.command\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"member.avatar.command\")}",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "101",
+      "varName": "${slashParams(\"Id\")}",
+      "dataName": "${slashParams(\"Id\")}.ban.by",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "banedby",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": " ",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "RANDOM",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${customEmoji(\"admin\")} **Admin:** <@${tempVars(\"banedby\")}>\n\n${customEmoji(\"gracz\")} **User:** <@${slashParams(\"Id\")}>\n\n${customEmoji(\"question\")} **Reason:** `${tempVars(\"sprawdz\")}`",
+          "fields": [],
+          "author": "${tempVars(\"member.username.command\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"member.avatar.command\")}",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "aaa",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "Id",
+      "description": "Poddaj id osoby ktora ma bana!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Sprawdzanie czy użytkownik ma bana!"
+}
