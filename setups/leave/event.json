@@ -1,0 +1,134 @@
+{
+  "name": "leave",
+  "temp": "test",
+  "event-type": "7",
+  "_id": "eZqKk",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "leave.msg",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "msg",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "leave.title",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "tytul",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "leave.color",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "color",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "leave.vc",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "channel",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "leave.footer",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "footer",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "1",
+      "varName": "color",
+      "comparison": "5",
+      "value": "'#'",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "text": "${tempVars(\"msg\")}",
+      "text2": "[user]",
+      "text3": "${tempVars(\"test\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "msg.join",
+      "name": "Replace Text"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "35",
+      "storage": "1",
+      "varName2": "server.osoby",
+      "name": "Store Server Info"
+    },
+    {
+      "text": "${tempVars(\"msg.join\")}",
+      "text2": "[users]",
+      "text3": "${tempVars(\"server.osoby\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "message",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"footer\")}",
+      "text2": "[users]",
+      "text3": "${tempVars(\"server.osoby\")}",
+      "info": "1",
+      "storage": "1",
+      "varName": "footer.join",
+      "name": "Replace Text"
+    },
+    {
+      "channel": "103",
+      "varName": "${tempVars(\"channel\")}",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${tempVars(\"tytul\")}",
+          "url": "",
+          "color": "${tempVars(\"color\")}",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${tempVars(\"message\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"footer.join\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
