@@ -1,0 +1,86 @@
+{
+  "name": "osiagniecie",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "AneAe",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "number",
+      "min": "1",
+      "max": "100",
+      "name": "Generate Random Number"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "${customEmoji(\"minecraft\")} Osiągnięcie minecraft!",
+          "url": "",
+          "color": "#6a85b0",
+          "timestamp": "false",
+          "imageUrl": "https://minecraftskinstealer.com/achievement/${tempVars(\"number\")}/Osiagniecie+Zdobyte/${slashParams(\"Tresc\")}",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Zdobywasz osiagniecie z minecrafta!",
+  "parameters": [
+    {
+      "name": "Tresc",
+      "description": "Poddaj jakie zdobywasz osiagniecie!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
