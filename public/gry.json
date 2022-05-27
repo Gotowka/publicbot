@@ -1,0 +1,1002 @@
+{
+  "name": "gry",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "fEZBh",
+  "actions": [
+    {
+      "behavior": "1",
+      "interpretation": "0",
+      "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(!member.voice.channel) {\n    interaction.reply(`Błąd: Dołącz na kanał głosowy!` ({ephemeral: true}))\n}\nelse if(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'youtube').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+      "storage": "0",
+      "varName": "GameInvite",
+      "name": "Run Script"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${customEmoji(\"niegif\")} **Błąd:** Dołącz na kanał głosowy!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "4",
+      "varName": "source",
+      "branches": [
+        {
+          "comparison": "1",
+          "value": "1",
+          "actions": [
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(!member.voice.channel) {\n    interaction.reply(`Błąd: Dołącz na kanał głosowy!` ({ephemeral: true}))\n}\nelse if(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'youtube').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-0489ac0",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "🎞️",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "YouTube - Together",
+                  "url": "",
+                  "color": "#fc584c",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://yt3.ggpht.com/ytc/AKedOLRTTAk-o_QYPOVmW2lXilRhd-VmBBol-IqrIM6U=s900-c-k-c0x00ffffff-no-rj",
+                  "description": "By obejrzeć **YouTube - Together** kliknij przycisk poniżej!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": "https://yt3.ggpht.com/ytc/AKedOLRTTAk-o_QYPOVmW2lXilRhd-VmBBol-IqrIM6U=s900-c-k-c0x00ffffff-no-rj"
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "2",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "info": "44",
+              "storage": "1",
+              "varName2": "boostcount",
+              "name": "Store Server Info"
+            },
+            {
+              "storage": "1",
+              "varName": "boostcount",
+              "comparison": "3",
+              "value": "2",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check Variable"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "${customEmoji(\"niegif\")} Serwer musi posiadać min **2 Boosty!**",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'ocho').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-6051cdc",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "⛱️",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Ocho - Together",
+                  "url": "",
+                  "color": "#fac941",
+                  "timestamp": "true",
+                  "imageUrl": "",
+                  "thumbUrl": "https://cdn.discordapp.com/attachments/956590040891400232/956606817813798932/Untitled.png",
+                  "description": "By zagrać **Ocho - Together** kliknij przycisk poniżej!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "3",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "info": "44",
+              "storage": "1",
+              "varName2": "boostcount",
+              "name": "Store Server Info"
+            },
+            {
+              "storage": "1",
+              "varName": "boostcount",
+              "comparison": "3",
+              "value": "2",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check Variable"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "${customEmoji(\"niegif\")} Serwer musi posiadać min **2 Boosty!**",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'poker').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-98935ac",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Poker - Together",
+                  "url": "",
+                  "color": " #5400db",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://cdn.discordapp.com/attachments/914992405726502962/942519649831096370/poker.jpg",
+                  "description": "Kliknij w przycisk aby dołączyc do aktywnosci!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "4",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "info": "44",
+              "storage": "1",
+              "varName2": "boostcount",
+              "name": "Store Server Info"
+            },
+            {
+              "storage": "1",
+              "varName": "boostcount",
+              "comparison": "3",
+              "value": "2",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check Variable"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "${customEmoji(\"niegif\")} Serwer musi posiadać min **2 Boosty!**",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'betrayal').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-47c1cd1",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Betrayal - Together",
+                  "url": "",
+                  "color": "#fac941",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://cdn.discordapp.com/attachments/923679845291008001/942884777499955220/about.png",
+                  "description": "Kliknij w przycisk aby dołączyc do aktywnosci!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": "https://cdn.discordapp.com/attachments/923679845291008001/942884777499955220/about.png"
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "5",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "info": "44",
+              "storage": "1",
+              "varName2": "boostcount",
+              "name": "Store Server Info"
+            },
+            {
+              "storage": "1",
+              "varName": "boostcount",
+              "comparison": "3",
+              "value": "2",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check Variable"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "${customEmoji(\"niegif\")} Serwer musi posiadać min **2 Boosty!**",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'awkword').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-7495678",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "⛱️",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Letter League - Together",
+                  "url": "",
+                  "color": "#fac941",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://cdn.discordapp.com/attachments/892647928341086259/933433027265196063/LL_logo.gif",
+                  "description": "Kliknij w przycisk aby dołączyc do aktywnosci!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "6",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "info": "44",
+              "storage": "1",
+              "varName2": "boostcount",
+              "name": "Store Server Info"
+            },
+            {
+              "storage": "1",
+              "varName": "boostcount",
+              "comparison": "3",
+              "value": "2",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check Variable"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "${customEmoji(\"niegif\")} Serwer musi posiadać min **2 Boosty!**",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'spellcast').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-b62777b",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "SpellCast - Together",
+                  "url": "",
+                  "color": "#fac941",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://cdn.discordapp.com/attachments/914992405726502962/942796601087381524/value.png",
+                  "description": "Kliknij w przycisk aby dołączyc do aktywnosci!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "7",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "info": "44",
+              "storage": "1",
+              "varName2": "boostcount",
+              "name": "Store Server Info"
+            },
+            {
+              "storage": "1",
+              "varName": "boostcount",
+              "comparison": "3",
+              "value": "2",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check Variable"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "${customEmoji(\"niegif\")} Serwer musi posiadać min **2 Boosty!**",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'chess').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-eea32e0",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Chess In The Park - Together",
+                  "url": "",
+                  "color": "#fac941",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://cdn.discordapp.com/attachments/914992405726502962/942793582337744926/chess_banner.png",
+                  "description": "Kliknij w przycisk aby dołączyc do aktywnosci!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "8",
+          "actions": [
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'awkword').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-9bc5f88",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Awkword - Together",
+                  "url": "",
+                  "color": "#fac941",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://cdn.discordapp.com/attachments/923679845291008001/944291592645279825/unknown.png",
+                  "description": "Kliknij w przycisk aby dołączyc do aktywnosci!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": "https://cdn.discordapp.com/attachments/923679845291008001/944291592645279825/unknown.png"
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "9",
+          "actions": [
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'SketchHeads').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-b8e6016",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "⛱️",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "SketchHeads - Together",
+                  "url": "",
+                  "color": "#fac941",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://cdn.discordapp.com/attachments/923679845291008001/944289116818919434/FLerfvjX0AICtfu.jpg",
+                  "description": "Kliknij w przycisk aby dołączyc do aktywnosci!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": "https://cdn.discordapp.com/attachments/923679845291008001/944289116818919434/FLerfvjX0AICtfu.jpg"
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "comparison": "1",
+          "value": "10",
+          "actions": [
+            {
+              "server": "0",
+              "varName": "",
+              "info": "44",
+              "storage": "1",
+              "varName2": "boostcount",
+              "name": "Store Server Info"
+            },
+            {
+              "storage": "1",
+              "varName": "boostcount",
+              "comparison": "3",
+              "value": "2",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "2",
+                "iffalseVal": "5"
+              },
+              "name": "Check Variable"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "${customEmoji(\"niegif\")} Serwer musi posiadać min **2 Boosty!**",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "behavior": "1",
+              "interpretation": "0",
+              "code": "const Discord = require('discord.js');\nconst { DiscordTogether } = require('discord-together');\n\nclient.discordTogether = new DiscordTogether(client);\n\nif(member.voice.channel) {\nclient.discordTogether.createTogetherCode(member.voice.channelId, 'checkers').then(invite => {\nActions.storeValue(invite.code, 1, \"GameInvite\", cache);\nActions.callNextAction(cache);\n});\n};",
+              "storage": "0",
+              "varName": "GameInvite",
+              "name": "Run Script"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤDolaczㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                  "type": "LINK",
+                  "id": "msg-button-eea32e0",
+                  "row": "",
+                  "url": "${tempVars(\"GameInvite\")}",
+                  "emoji": "",
+                  "mode": "PERSISTENT",
+                  "time": "",
+                  "actions": []
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Checkers In The Park - Together",
+                  "url": "",
+                  "color": "#fac941",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "https://cdn.discordapp.com/attachments/956590040891400232/956605899085074442/checkers_splash.png",
+                  "description": "Kliknij w przycisk aby dołączyc do aktywnosci!",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": false,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        }
+      ],
+      "name": "Multi-Check Variable"
+    }
+  ],
+  "comType": "4",
+  "description": "Wybierz swoją aktywność!",
+  "parameters": [
+    {
+      "name": "source",
+      "description": "Wybierz jaką gre chcesz zagrać!",
+      "type": "STRING",
+      "required": true,
+      "choices": [
+        {
+          "name": "youtube",
+          "value": "1"
+        },
+        {
+          "name": "karty",
+          "value": "2"
+        },
+        {
+          "name": "poker",
+          "value": "3"
+        },
+        {
+          "name": "betrayal",
+          "value": "4"
+        },
+        {
+          "name": "letter-league",
+          "value": "5"
+        },
+        {
+          "name": "spellcast",
+          "value": "6"
+        },
+        {
+          "name": "szachy",
+          "value": "7"
+        },
+        {
+          "name": "awkword",
+          "value": "8"
+        },
+        {
+          "name": "kalambury",
+          "value": "9"
+        },
+        {
+          "name": "warcaby",
+          "value": "10"
+        }
+      ]
+    }
+  ]
+}
