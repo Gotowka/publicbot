@@ -1,0 +1,87 @@
+{
+  "name": "channel-id",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "oIpPu",
+  "actions": [
+    {
+      "channel": "6",
+      "varName": "Channel",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Channel Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Sukces!",
+          "url": "",
+          "color": "#6a85b0",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "<:txtc:969030192855146596> **-** ${slashParams(\"Channel\")}\n<:question:968646961785876483> **-** `${tempVars(\"id\")}`",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Poznaj id danego kanalu!",
+  "parameters": [
+    {
+      "name": "Channel",
+      "description": "Poddaj kanał o którym chcesz poznać id!",
+      "type": "CHANNEL",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
