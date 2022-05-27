@@ -1,0 +1,283 @@
+{
+  "name": "propozycje-setup",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "yJPLp",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "member.username.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member.id.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member.avatar.command",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "7"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Błąd!",
+          "url": "",
+          "color": "#c77575",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "<:nie:968692398102298634> **Brak uprawnień**!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "6",
+      "varName": "Kanal",
+      "info": "0",
+      "storage": "1",
+      "varName2": "check",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "check",
+      "comparison": "1",
+      "value": "undefined",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Błąd!",
+          "url": "",
+          "color": "#c77575",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "${customEmoji(\"nie\")} **Podałeś błędne id!**\n${customEmoji(\"tak\")} **Daj poprawne id!**\n${customEmoji(\"question\")} **Aby poznać id danego kanału użyj komendy /channel-id**",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "${tempVars(\"member.username.command\")} (${tempVars(\"member.id.command\")})",
+          "footerIconUrl": "${tempVars(\"member.avatar.command\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.title",
+      "changeType": "0",
+      "value": "slashParams(\"Tytul\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.message",
+      "changeType": "0",
+      "value": "slashParams(\"Tresc\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.footer",
+      "changeType": "0",
+      "value": "slashParams(\"Footer\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.komentarz",
+      "changeType": "0",
+      "value": "slashParams(\"Komentarz\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.color",
+      "changeType": "0",
+      "value": "slashParams(\"Color\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "suggest.vc",
+      "changeType": "0",
+      "value": "slashParams(\"Kanal\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${customEmoji(\"takgif\")} Pomyślnie ustawiono setup!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Setup propozycji!",
+  "parameters": [
+    {
+      "name": "Tytul",
+      "description": "Podaj tytuł embeda! [/vars]",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Tresc",
+      "description": "Podaj tresc embeda! [/vars]",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Footer",
+      "description": "Podaj footer embeda! [/vars]",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Color",
+      "description": "Podaj color embeda!",
+      "type": "STRING",
+      "required": true,
+      "choices": [
+        {
+          "name": "green",
+          "value": "GREEN"
+        },
+        {
+          "name": "losowy",
+          "value": "RANDOM"
+        },
+        {
+          "name": "red",
+          "value": "RED"
+        },
+        {
+          "name": "purple",
+          "value": "PURPLE"
+        },
+        {
+          "name": "yellow",
+          "value": "YELLOW"
+        }
+      ]
+    },
+    {
+      "name": "Kanal",
+      "description": "Podaj id kanału na którym liczą się propozycje!",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Komentarz",
+      "description": "Włącz/Wyłącz komentarze propozycji!",
+      "type": "STRING",
+      "required": true,
+      "choices": [
+        {
+          "name": "właczone",
+          "value": "on"
+        },
+        {
+          "name": "wyłaczone",
+          "value": "off"
+        }
+      ]
+    }
+  ]
+}
