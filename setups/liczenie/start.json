@@ -1,0 +1,130 @@
+{
+  "name": "liczenie",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "LfUUp",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "count.channel",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "kanal",
+      "name": "Store Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "kanal",
+      "comparison": "1",
+      "value": "tempVars(\"id\")",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "count.counts",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "liczenie-wartosc-w-zmiennej",
+      "name": "Store Server Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"liczenie-wartosc-w-zmiennej\")}",
+      "info": "0",
+      "SecondNumber": "1",
+      "storage": "1",
+      "varName": "liczenie-+1-operation-math",
+      "name": "Math Operation Plus"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "text",
+      "name": "Store Message Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "lastid",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "count.last",
+      "defaultVal": "",
+      "storage": "1",
+      "varName2": "lastuserid",
+      "name": "Store Server Data"
+    },
+    {
+      "storage": "1",
+      "varName": "lastuserid",
+      "comparison": "1",
+      "value": "tempVars(\"lastid\")",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "text",
+      "comparison": "1",
+      "value": "tempVars(\"liczenie-+1-operation-math\")",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "14"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "count.counts",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "count.last",
+      "changeType": "0",
+      "value": "tempVars(\"lastid\")",
+      "name": "Control Server Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    }
+  ],
+  "comType": "3",
+  "description": ""
+}
